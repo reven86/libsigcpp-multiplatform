@@ -49,10 +49,10 @@
 
 /* does the C++ compiler support the use of a particular specialization when
    calling operator() template methods. */
-# undef SIGC_GCC_TEMPLATE_SPECIALIZATION_OPERATOR_OVERLOAD
+# define SIGC_GCC_TEMPLATE_SPECIALIZATION_OPERATOR_OVERLOAD
 
 /* Defined when the libstdc++ declares the std-namespace */
-# undef SIGC_HAVE_NAMESPACE_STD
+# define SIGC_HAVE_NAMESPACE_STD
 
 /* Define if the non-standard Sun reverse_iterator must be used. */
 # undef SIGC_HAVE_SUN_REVERSE_ITERATOR
