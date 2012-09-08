@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\sigc++config.h" />
+    <ClInclude Include="..\sigc++\adaptors\adaptors.h" />
+    <ClInclude Include="..\sigc++\adaptors\adaptor_trait.h" />
+    <ClInclude Include="..\sigc++\adaptors\bind.h" />
+    <ClInclude Include="..\sigc++\adaptors\bind_return.h" />
+    <ClInclude Include="..\sigc++\adaptors\bound_argument.h" />
+    <ClInclude Include="..\sigc++\adaptors\compose.h" />
+    <ClInclude Include="..\sigc++\adaptors\deduce_result_type.h" />
+    <ClInclude Include="..\sigc++\adaptors\exception_catch.h" />
+    <ClInclude Include="..\sigc++\adaptors\hide.h" />
+    <ClInclude Include="..\sigc++\adaptors\lambda\base.h" />
+    <ClInclude Include="..\sigc++\adaptors\lambda\group.h" />
+    <ClInclude Include="..\sigc++\adaptors\lambda\lambda.h" />
+    <ClInclude Include="..\sigc++\adaptors\lambda\operator.h" />
+    <ClInclude Include="..\sigc++\adaptors\lambda\select.h" />
+    <ClInclude Include="..\sigc++\adaptors\retype.h" />
+    <ClInclude Include="..\sigc++\adaptors\retype_return.h" />
+    <ClInclude Include="..\sigc++\bind.h" />
+    <ClInclude Include="..\sigc++\bind_return.h" />
+    <ClInclude Include="..\sigc++\class_slot.h" />
+    <ClInclude Include="..\sigc++\connection.h" />
+    <ClInclude Include="..\sigc++\functors\functors.h" />
+    <ClInclude Include="..\sigc++\functors\functor_trait.h" />
+    <ClInclude Include="..\sigc++\functors\mem_fun.h" />
+    <ClInclude Include="..\sigc++\functors\ptr_fun.h" />
+    <ClInclude Include="..\sigc++\functors\slot.h" />
+    <ClInclude Include="..\sigc++\functors\slot_base.h" />
+    <ClInclude Include="..\sigc++\hide.h" />
+    <ClInclude Include="..\sigc++\limit_reference.h" />
+    <ClInclude Include="..\sigc++\method_slot.h" />
+    <ClInclude Include="..\sigc++\object.h" />
+    <ClInclude Include="..\sigc++\object_slot.h" />
+    <ClInclude Include="..\sigc++\reference_wrapper.h" />
+    <ClInclude Include="..\sigc++\retype.h" />
+    <ClInclude Include="..\sigc++\retype_return.h" />
+    <ClInclude Include="..\sigc++\sigc++.h" />
+    <ClInclude Include="..\sigc++\signal.h" />
+    <ClInclude Include="..\sigc++\signal_base.h" />
+    <ClInclude Include="..\sigc++\slot.h" />
+    <ClInclude Include="..\sigc++\trackable.h" />
+    <ClInclude Include="..\sigc++\type_traits.h" />
+    <ClInclude Include="..\sigc++\visit_each.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\sigc++\adaptors\lambda\lambda.cc" />
+    <ClCompile Include="..\sigc++\connection.cc" />
+    <ClCompile Include="..\sigc++\functors\slot.cc" />
+    <ClCompile Include="..\sigc++\functors\slot_base.cc" />
+    <ClCompile Include="..\sigc++\signal.cc" />
+    <ClCompile Include="..\sigc++\signal_base.cc" />
+    <ClCompile Include="..\sigc++\trackable.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\sigc++\filelist.am" />
+    <None Include="..\sigc++\Makefile.am" />
+    <None Include="..\sigc++\Makefile.in" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{1A4A6E64-7FA0-45DA-A840-69CF07D22382}</ProjectGuid>
+    <RootNamespace>project</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="common.props" />
+    <Import Project="release.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="common.props" />
+    <Import Project="debug.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
