@@ -8,10 +8,10 @@ LOCAL_MODULE     := libsigc++                 # name of your module
 LOCAL_LDLIBS     := -L$(SYSROOT)/usr/lib    # libraries to link against
 LOCAL_CPP_EXTENSION := .cc
 
-# LOCAL_CFLAGS := -v
+LOCAL_CFLAGS := -O3
 LOCAL_SRC_FILES := sigc++/signal.cc sigc++/signal_base.cc sigc++/trackable.cc \
-	sigc++/functors/slot_base.cc sigc++/adaptors/lambda/lambda.cc \
-	sigc++/connection.cc sigc++/functors/slot.cc
+    sigc++/functors/slot_base.cc sigc++/adaptors/lambda/lambda.cc \
+    sigc++/connection.cc sigc++/functors/slot.cc
 
 LOCAL_C_INCLUDES := sigc++
 
