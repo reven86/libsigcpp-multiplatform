@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB5952FA17CD02B000FC4363 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB5952F917CD02B000FC4363 /* Foundation.framework */; };
+		EB59530517CD04AF00FC4363 /* lambda.cc in Sources */ = {isa = PBXBuildFile; fileRef = EBF7F6A11634347500F350CE /* lambda.cc */; };
+		EB59530617CD04AF00FC4363 /* connection.cc in Sources */ = {isa = PBXBuildFile; fileRef = EBF7F6BA1634347500F350CE /* connection.cc */; };
+		EB59530717CD04AF00FC4363 /* slot.cc in Sources */ = {isa = PBXBuildFile; fileRef = EBF7F6C71634347500F350CE /* slot.cc */; };
+		EB59530817CD04AF00FC4363 /* signal.cc in Sources */ = {isa = PBXBuildFile; fileRef = EBF7F6E01634347500F350CE /* signal.cc */; };
+		EB59530917CD04AF00FC4363 /* signal_base.cc in Sources */ = {isa = PBXBuildFile; fileRef = EBF7F6E21634347500F350CE /* signal_base.cc */; };
+		EB59530A17CD04AF00FC4363 /* trackable.cc in Sources */ = {isa = PBXBuildFile; fileRef = EBF7F6E51634347500F350CE /* trackable.cc */; };
+		EB59530B17CD051E00FC4363 /* slot_base.cc in Sources */ = {isa = PBXBuildFile; fileRef = EBF7F6C91634347500F350CE /* slot_base.cc */; };
 		EBF7F6E91634347500F350CE /* adaptor_trait.h in Headers */ = {isa = PBXBuildFile; fileRef = EBF7F6951634347500F350CE /* adaptor_trait.h */; };
 		EBF7F6EA1634347500F350CE /* adaptors.h in Headers */ = {isa = PBXBuildFile; fileRef = EBF7F6961634347500F350CE /* adaptors.h */; };
 		EBF7F6EB1634347500F350CE /* bind.h in Headers */ = {isa = PBXBuildFile; fileRef = EBF7F6971634347500F350CE /* bind.h */; };
@@ -57,8 +65,22 @@
 		EBF7F7181634347500F350CE /* visit_each.h in Headers */ = {isa = PBXBuildFile; fileRef = EBF7F6E81634347500F350CE /* visit_each.h */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		EB5952F517CD02B000FC4363 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		EBF7F689163433E000F350CE /* libsigcpp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libsigcpp.a; path = "libsigcpp-osx.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB5952F717CD02B000FC4363 /* libsigcpp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libsigcpp.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB5952F917CD02B000FC4363 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EBF7F689163433E000F350CE /* libsigcpp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libsigcpp.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBF7F6951634347500F350CE /* adaptor_trait.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = adaptor_trait.h; sourceTree = "<group>"; };
 		EBF7F6961634347500F350CE /* adaptors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = adaptors.h; sourceTree = "<group>"; };
 		EBF7F6971634347500F350CE /* bind.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bind.h; sourceTree = "<group>"; };
@@ -140,6 +162,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		EB5952F417CD02B000FC4363 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB5952FA17CD02B000FC4363 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EBF7F686163433E000F350CE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -150,10 +180,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EB5952F817CD02B000FC4363 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EB5952F917CD02B000FC4363 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EBF7F67E163433E000F350CE = {
 			isa = PBXGroup;
 			children = (
 				EBF7F6931634347500F350CE /* sigc++ */,
+				EB5952F817CD02B000FC4363 /* Frameworks */,
 				EBF7F68A163433E000F350CE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -162,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				EBF7F689163433E000F350CE /* libsigcpp.a */,
+				EB5952F717CD02B000FC4363 /* libsigcpp.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -362,6 +402,23 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		EB5952F617CD02B000FC4363 /* sigcpp-ios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EB59530217CD02B000FC4363 /* Build configuration list for PBXNativeTarget "sigcpp-ios" */;
+			buildPhases = (
+				EB5952F317CD02B000FC4363 /* Sources */,
+				EB5952F417CD02B000FC4363 /* Frameworks */,
+				EB5952F517CD02B000FC4363 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "sigcpp-ios";
+			productName = "sigcpp-ios";
+			productReference = EB5952F717CD02B000FC4363 /* libsigcpp.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 		EBF7F688163433E000F350CE /* sigcpp-osx */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EBF7F68D163433E000F350CE /* Build configuration list for PBXNativeTarget "sigcpp-osx" */;
@@ -401,11 +458,26 @@
 			projectRoot = "";
 			targets = (
 				EBF7F688163433E000F350CE /* sigcpp-osx */,
+				EB5952F617CD02B000FC4363 /* sigcpp-ios */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		EB5952F317CD02B000FC4363 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB59530B17CD051E00FC4363 /* slot_base.cc in Sources */,
+				EB59530517CD04AF00FC4363 /* lambda.cc in Sources */,
+				EB59530617CD04AF00FC4363 /* connection.cc in Sources */,
+				EB59530717CD04AF00FC4363 /* slot.cc in Sources */,
+				EB59530817CD04AF00FC4363 /* signal.cc in Sources */,
+				EB59530917CD04AF00FC4363 /* signal_base.cc in Sources */,
+				EB59530A17CD04AF00FC4363 /* trackable.cc in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EBF7F685163433E000F350CE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -423,6 +495,41 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		EB59530317CD02B000FC4363 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				DSTROOT = /tmp/sigcpp_ios.dst;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_LDFLAGS = "-ObjC";
+				SDKROOT = iphoneos6.1;
+				SKIP_INSTALL = YES;
+				VALID_ARCHS = "armv7 armv7s i386";
+			};
+			name = Debug;
+		};
+		EB59530417CD02B000FC4363 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				DSTROOT = /tmp/sigcpp_ios.dst;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_LDFLAGS = "-ObjC";
+				SDKROOT = iphoneos6.1;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "armv7 armv7s i386";
+			};
+			name = Release;
+		};
 		EBF7F68B163433E000F350CE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -451,7 +558,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = sigcpp;
-				SDKROOT = macosx;
+				SDKROOT = macosx10.7;
 			};
 			name = Debug;
 		};
@@ -476,7 +583,7 @@
 				HEADER_SEARCH_PATHS = ../;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = sigcpp;
-				SDKROOT = macosx;
+				SDKROOT = macosx10.7;
 			};
 			name = Release;
 		};
@@ -499,6 +606,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		EB59530217CD02B000FC4363 /* Build configuration list for PBXNativeTarget "sigcpp-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB59530317CD02B000FC4363 /* Debug */,
+				EB59530417CD02B000FC4363 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		EBF7F683163433E000F350CE /* Build configuration list for PBXProject "sigcpp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
